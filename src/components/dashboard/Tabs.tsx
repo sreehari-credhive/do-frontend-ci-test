@@ -5,7 +5,7 @@ const tabData = ["Overview", "Management", "Shareholding", "Docs", "Versions"];
 export const Tabs = () => {
   return (
     <>
-      <nav className="w-full flex gap-20 justify-start mt-5 ml-2">
+      <nav className="w-full flex gap-6 md:gap-20 justify-start mt-5 ml-2 flex-wrap">
         {tabData.map((name, index) => (
           <span
             key={index}

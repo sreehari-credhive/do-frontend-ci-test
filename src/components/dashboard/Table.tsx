@@ -55,7 +55,7 @@ export const Table = ({
   };
 
   return (
-    <div className=" border border-gray-300  flex justify-between flex-col h-[calc(100%-90px)] mt-4">
+    <div className=" border border-gray-300 flex justify-between flex-col h-[calc(100%-90px)] mt-4 w-full">
       <EditModal
         id={modalData.id}
         isOpen={isModalOpen}
@@ -65,13 +65,13 @@ export const Table = ({
       />
       <div>
         <div className="grid grid-cols-7 gap-4 bg-gray-100 p-2 font-normal text-gray-600 text-sm">
-          <div></div>
-          <div>Company</div>
-          <div>Type</div>
-          <div>Registration ID</div>
-          <div>Location</div>
-          <div>Owner</div>
-          <div>Action</div>
+          <div className="hidden sm:block"></div>
+          <div className="truncate">Company</div>
+          <div className="truncate">Type</div>
+          <div className="truncate">Registration ID</div>
+          <div className="truncate">Location</div>
+          <div className="truncate">Owner</div>
+          <div className="truncate">Action</div>
         </div>
 
         {data.map((info) => (
@@ -81,7 +81,7 @@ export const Table = ({
           >
             <Flag
               className={classnames(
-                "cursor-pointer text-blue-500 hover:text-gray-600",
+                "cursor-pointer text-blue-500 hover:text-gray-600 hidden sm:block",
                 {
                   "text-red-400": selected.includes(info.id),
                 }
