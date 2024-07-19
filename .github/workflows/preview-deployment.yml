@@ -15,18 +15,19 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '16'
-    - name: Install PNPM globally
-      run: npm install -g pnpm    
+        node-version: '18'  # Updated to version 18
+
+    - name: Install pnpm
+      run: npm install -g pnpm
 
     - name: Install dependencies
       run: pnpm install
 
     - name: Build project
-      run: pnpm run build
+      run: pnpm build
 
     - name: Deploy to DigitalOcean App Platform
       uses: digitalocean/action-doctl@v2
       with:
         token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-        args: app create --spec .do/app-spec.yml
+        args: app update --spec .do/app-spec.yml
