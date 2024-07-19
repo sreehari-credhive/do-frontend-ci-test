@@ -11,7 +11,7 @@ export const Topbar = () => {
           <ArrowRight className="text-xs w-2.5" />
         </span>
         <span className="text-blue-900 text-xs self-center">
-          Tesla India Corp
+          Sreehari Jayaraj PVT LTD
         </span>
       </div>
     </>

@@ -1,0 +1,13 @@
+name: my-react-app
+services:
+  - name: web
+    github:
+      repo: user/repo
+      branch: main
+    envs:
+      - key: NODE_ENV
+        value: production
+    build_command: pnpm build
+    run_command: pnpm start
+    routes:
+      - path: /
