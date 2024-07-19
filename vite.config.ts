@@ -16,4 +16,12 @@ export default defineConfig({
     ui: true,
     setupFiles: "./src/tests/setup.ts",
   },
+  server: {
+    host: "0.0.0.0",
+    port: 4173,
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 4173,
+  },
 });
